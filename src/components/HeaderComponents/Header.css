@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap');
+
+.Header{
+    color: rgb(89, 27, 146);
+    height: 13vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vh 2vw;
+}
+.Logo{
+    display: flex;
+    /* background-color: black; */
+    padding: 0px 4vw;
+    font-size: 1.6vw;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: rgb(36, 36, 36);
+}
+
+.ActivityToolBar{
+    border: 5px;
+    height:max-content;
+    display: flex;
+    flex-direction: row;
+}
