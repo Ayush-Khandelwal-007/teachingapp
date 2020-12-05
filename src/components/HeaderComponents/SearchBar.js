@@ -5,9 +5,11 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
     search: {
+        display:'flex',
+        height:'6vh',
         position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.15),
+        borderRadius: theme.shape.borderRadius+5,
+        backgroundColor:'#f3f6f7',
         '&:hover': {
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
@@ -31,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'inherit',
     },
     inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
+        padding: theme.spacing(1, 15, 1, 0),
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -39,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
             width: '12ch',
             '&:focus': {
                 width: '20ch',
+                backgroundColor: 'white',
             },
         },
     },

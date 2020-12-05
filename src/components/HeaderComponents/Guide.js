@@ -6,12 +6,9 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import { Avatar } from '@material-ui/core';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-
-function ProfileMenu() {
+function Guide() {
 
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
@@ -46,24 +43,15 @@ function ProfileMenu() {
 
 
     return (
-        <div className="card ProfileMenu">
-            <NotificationsIcon
-                    fontSize="large"
-                    color="primary"
-                    style={{
-                        marginRight:"1vw",
-                        marginLeft:"1vw",
-                        color:'#5c15b8'
-                    }} />
+        <div className='Guide'>
             <Button
                 ref={anchorRef}
                 aria-controls={open ? 'menu-list-grow' : undefined}
                 aria-haspopup="true"
                 onClick={handleToggle}
             >
-                
-                <Avatar />
-                <ArrowDropDownIcon style={{color:'#5c15b8'}}/>
+
+                <span className="PurpleText">Tool Guide<ArrowDropDownIcon /></span>
             </Button>
             <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                 {({ TransitionProps, placement }) => (
@@ -74,9 +62,12 @@ function ProfileMenu() {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                                    <MenuItem onClick={handleClose}>Tool1</MenuItem>
+                                    <MenuItem onClick={handleClose}>Tool2</MenuItem>
+                                    <MenuItem onClick={handleClose}>Tool3</MenuItem>
+                                    <MenuItem onClick={handleClose}>Tool4</MenuItem>
+                                    <MenuItem onClick={handleClose}>Tool5</MenuItem>
+                                    <MenuItem onClick={handleClose}>Tool6</MenuItem>
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>
@@ -87,4 +78,4 @@ function ProfileMenu() {
     )
 }
 
-export default ProfileMenu
+export default Guide

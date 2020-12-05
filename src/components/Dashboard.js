@@ -1,9 +1,13 @@
 import React from 'react'
+import Header from './Header'
+import './DashboardComponents/Dashboard.css'
+import Syllabus from './Syllabus'
 
 function Dashboard() {
     return (
-        <div>
-            
+        <div className="Dashboard">
+            <Header/>
+            <Syllabus/>
         </div>
     )
 }

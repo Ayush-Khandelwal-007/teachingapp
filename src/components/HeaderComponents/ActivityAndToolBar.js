@@ -1,10 +1,12 @@
 import React from 'react'
+import Activity from './Activity'
+import Guide from './Guide'
 
 function ActivityAndToolBar() {
     return (
-        <div className="ActivityToolBar">
-            <div>Activity</div>
-            <div>Tool Guide</div>
+        <div className="ActivityToolBar card">
+            <Activity/>
+            <Guide/>
         </div>
     )
 }
